@@ -1,0 +1,94 @@
+
+<div class="container-fluid">
+
+    <div class="panel panel-default" style="margin-bottom: 0px;">
+        <div class="panel-heading" style="margin-bottom:12px;">
+            <a href="/admin/">返回</a>
+            {{if gt .info.Id 0}}编辑{{else}}添加{{end}}球员信息
+        </div>
+        <form class="form-horizontal" action="/admin/save" method="post">
+            <div class="form-group" style="height:30px;">
+                <label for="input_name_zh" class="col-sm-2 control-label">中文名</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="input_name_zh" name="name_zh" value="{{.info.NameZh}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_name_en" class="col-sm-2 control-label">英文名</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="input_name_en" name="name_en" value="{{.info.NameEn}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_avatar" class="col-sm-2 control-label">头像</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="input_avatar" name="avatar" value="{{.info.Avatar}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_birthday" class="col-sm-2 control-label">出生日期</label>
+                <div class="col-sm-9">
+                    <input placeholder="格式 2018-01-01" type="text" class="form-control" id="input_birthday" name="birthday" value="{{.info.Birthday}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_height" class="col-sm-2 control-label">身高</label>
+                <div class="col-sm-9">
+                    <input placeholder="单位cm" type="text" class="form-control" id="input_height" name="height" value="{{.info.Height}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_weight" class="col-sm-2 control-label">体重</label>
+                <div class="col-sm-9">
+                    <input placeholder="单位g" type="text" class="form-control" id="input_weight" name="weight" value="{{.info.Weight}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_club" class="col-sm-2 control-label">俱乐部</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="input_club" name="club" value="{{.info.Club}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_jersy" class="col-sm-2 control-label">球衣号码以及主打位置</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="input_jersy" name="jersy" value="{{.info.Jersy}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_country" class="col-sm-2 control-label">国籍</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="input_country" name="country" value="{{.info.Country}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_birthaddress" class="col-sm-2 control-label">出生地</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="input_birthaddress" name="birthaddress" value="{{.info.Birthaddress}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_feature" class="col-sm-2 control-label">个人特点</label>
+                <div class="col-sm-9">
+                    <input type="text" class="form-control" id="input_feature" name="feature" value="{{.info.Feature}}">
+                </div>
+            </div>
+            <div class="form-group" style="height:30px;">
+                <label for="input_moreinfo" class="col-sm-2 control-label">更多介绍</label>
+                <div class="col-sm-9">
+                    <textarea style="width: 100%" id="input_moreinfo" name="moreinfo">{{.info.Moreinfo}}</textarea>
+                </div>
+            </div>
+
+    </div>
+    <div class="form-group" style="height:30px;">
+        <div class="col-sm-offset-2 col-sm-9">
+            <button type="submit" class="btn btn-default">保存</button>
+            <input type="reset" class="btn btn-default" value="重置" />
+            <input type="hidden" class="form-control" id="input_id" name="id" value="{{.info.Id}}">
+        </div>
+    </div>
+    </form>
+</div>
+
+</div>

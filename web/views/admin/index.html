@@ -1,0 +1,42 @@
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>中文名</th>
+        <th>英文名</th>
+        <th>图片</th>
+        <th>出生日期</th>
+        <th>身高</th>
+        <th>体重</th>
+        <th>俱乐部</th>
+        <th>球衣</th>
+        <th>国籍</th>
+        <th>更新时间</th>
+        <th>管理</th>
+    </tr>
+    </thead>
+    <tbody>
+{{range $i, $data := .Datalist}}
+{{if eq $data.SysStatus 0}}
+    <tr>
+        <th scope="row">{{.Id}}</th>
+        <td>{{$data.NameZh}}</td>
+        <td>{{$data.NameEn}}</td>
+        <td><img src="{{$data.Avatar}}" width="50"/></td>
+        <td>{{$data.Birthday}}</td>
+        <td>{{$data.Height}}</td>
+        <td>{{$data.Weight}}</td>
+        <td>{{$data.Club}}</td>
+        <td>{{$data.Jersy}}</td>
+        <td>{{$data.Country}}</td>
+        <td>{{FromUnixtime $data.SysUpdated}}</td>
+        <td>
+            <a href="/admin/edit?id={{.Id}}">修改</a>
+            <a href="/admin/delete?id={{.Id}}">删除</a>
+        </td>
+    </tr>
+{{end}}
+{{end}}
+    </tbody>
+</table>

@@ -1,0 +1,25 @@
+{{if gt .info.Id 0}}
+    <div class="col-xs-6 col-md-3">
+            <img src="{{.info.Avatar}}" alt="...">
+    </div>
+    <div class="col-xs-6 col-md-3">
+        <table class="table">
+            <tbody>
+        <tr><td>中文名</td><td>{{.info.NameZh}}</td></tr>
+        <tr><td>英文名</td><td>{{.info.NameEn}}</td></tr>
+        <tr><td>出生日期</td><td>{{.info.Birthday}}</td></tr>
+        <tr><td>身高</td><td>{{.info.Height}}</td></tr>
+        <tr><td>体重</td><td>{{.info.Weight}}</td></tr>
+        <tr><td>俱乐部</td><td>{{.info.Club}}</td></tr>
+        <tr><td>球衣号码以及主打位置</td><td>{{.info.Jersy}}</td></tr>
+        <tr><td>国籍</td><td>{{.info.Country}}</td></tr>
+        <tr><td>出生地</td><td>{{.info.Birthaddress}}</td></tr>
+        <tr><td>个人特点</td><td>{{.info.Feature}}</td></tr>
+        <tr><td>更多信息</td><td>{{.info.Moreinfo}}</td></tr>
+    </tbody>
+    </table>
+    </div>
+{{else}}
+    没有球员信息，<a href="/">返回首页</a>
+{{end}}
+<br style="clear: both;"/>

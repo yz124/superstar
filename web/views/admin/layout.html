@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <!-- Bootstrap core CSS -->
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional Bootstrap Theme -->
+    <link href="data:text/css;charset=utf-8," data-href="https://v3.bootcss.com/dist/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+    <title>{{.Title}} - {{.AppName}}</title>
+
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">球星库</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/admin/">全部球星 <span class="sr-only">(current)</span></a></li>
+                <li><a href="/admin/edit">添加球星</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">国籍筛选 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/admin/search?country=中国">中国</a></li>
+                        <li><a href="/admin/search?country=巴西">巴西</a></li>
+                        <li><a href="/admin/search?country=阿根廷">阿根廷</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/admin/search?country=西班牙">西班牙</a></li>
+                        <li><a href="/admin/search?country=葡萄牙">葡萄牙</a></li>
+                        <li><a href="/admin/search?country=英国">英国</a></li>
+                        <li><a href="/admin/search?country=德国">德国</a></li>
+                        <li><a href="/admin/search?country=法国">法国</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/admin/search?country=美国">美国</a></li>
+                        <li><a href="/admin/search?country=意大利">意大利</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="https://github.com/yz124/superstar/" target="_blank">源代码</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">更多 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+    <div>
+        <!-- Render the current template here -->
+        {{ yield }}
+        <hr />
+        <footer style="text-align: center;">
+            <p>&copy; 2018 - {{.AppOwner}}</p>
+        </footer>
+    </div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/public/js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/public/js/jquery.min.js"><\/script>')</script>
+<script src="/public/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<div >
+{{range $i, $data := .Datalist}}
+{{if eq $data.SysStatus 0}}
+    <div class="col-xs-6 col-md-3">
+        <a href="/{{.Id}}" class="thumbnail" style="text-align: center;">
+            <img src="{{.Avatar}}" alt="...">
+            <span>{{.NameZh}}</span>
+        </a>
+    </div>
+{{end}}
+{{end}}
+</div>
+<br style="clear: both;"/>
