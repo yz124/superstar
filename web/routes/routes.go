@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/kataras/iris/mvc"
+	"github.com/kataras/iris/v12/mvc"
 
 	"github.com/yz124/superstar/bootstrap"
 	"github.com/yz124/superstar/services"

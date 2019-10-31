@@ -2,7 +2,7 @@
 使用Go语言的iris+xorm框架，实现的球星库
 <br/>
 
-## golang下载 1.9.7
+## golang下载 1.13.3
 <br/>
 https://golang.org/dl/
 <br/>

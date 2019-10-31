@@ -7,8 +7,8 @@ package controllers
 import (
 	"log"
 
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/mvc"
+	"github.com/kataras/iris/v12"
+	"github.com/kataras/iris/v12/mvc"
 
 	"github.com/yz124/superstar/datasource"
 	"github.com/yz124/superstar/models"
